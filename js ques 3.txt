@@ -1,0 +1,12 @@
+function isArmstrong(num) {
+  let digits = [...num.toString()]
+  let result = 0
+  let power = digits.length;
+  digits.forEach((digit) => {
+    result+=Math.pow(parseInt(digit),power)
+  })
+  if(result === num) return "yes"
+  return "No"
+}
+
+console.log(isArmstrong(22))
